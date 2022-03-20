@@ -13,7 +13,7 @@ interface Props {
   size?: number;
 }
 
-const CustomLink: React.FC<Props> = ({
+const IconLink: React.FC<Props> = ({
   icon,
   href,
   target,
@@ -24,9 +24,13 @@ const CustomLink: React.FC<Props> = ({
 }) => {
   return (
     <a href={href} target={target} rel={rel}>
-      {hasTooltip ? <TooltipIcon label={label} icon={icon} /> : <Icon boxSize={size} as={icon} />}
+      {hasTooltip ? (
+        <TooltipIcon size={size} label={label} icon={icon} />
+      ) : (
+        <Icon boxSize={size} as={icon} />
+      )}
     </a>
   );
 };
 
-export default CustomLink;
+export default IconLink;

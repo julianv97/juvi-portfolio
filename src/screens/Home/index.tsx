@@ -1,12 +1,15 @@
 import React from 'react';
-import { Flex, Heading, HStack, Stack, Text, Icon } from '@chakra-ui/react';
+import { Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import { GiCoffeeCup } from 'react-icons/gi';
+import { motion } from 'framer-motion';
 import Section from '../../components/Section';
 import ProjectsList from '../../components/ProjectsList';
 import PostsList from '../../components/PostsList';
 import ButtonLine from '../../components/ButtonLine';
+import IconLink from '../../components/IconLink';
 
 const Home = () => {
+  const AnimatedIcon = motion(Flex);
   return (
     <Flex flexDirection="column" alignItems="center" w="full">
       <Section>
@@ -17,9 +20,22 @@ const Home = () => {
               FullStack Developer ( Web / Mobile / Self-Taught )
             </Text>
           </Stack>
-          <Flex w="100%" justifyContent="flex-end">
-            <Icon as={GiCoffeeCup} w="28" h="28" color="blue.700" />
-          </Flex>
+          <AnimatedIcon
+            whileHover={{
+              scale: 1.2,
+            }}
+            color="blue.500"
+          >
+            <IconLink
+              icon={GiCoffeeCup}
+              href="https://cafecito.app/julianv97"
+              target="_blank"
+              rel="noreferrer"
+              size={100}
+              hasTooltip
+              label="Coffe?"
+            />
+          </AnimatedIcon>
         </HStack>
       </Section>
 

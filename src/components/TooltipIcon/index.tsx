@@ -6,13 +6,14 @@ interface Props {
   label: string;
   icon: IconType;
   onClick?: () => void;
+  size?: number;
 }
 
-const TooltipIcon: React.FC<Props> = ({ label, icon, onClick = () => {} }) => {
+const TooltipIcon: React.FC<Props> = ({ label, icon, onClick = () => {}, size = 34 }) => {
   return (
     <Tooltip label={label}>
       <Box onClick={onClick}>
-        <Icon boxSize={34} as={icon} cursor="pointer" />
+        <Icon boxSize={size} as={icon} cursor="pointer" />
       </Box>
     </Tooltip>
   );
