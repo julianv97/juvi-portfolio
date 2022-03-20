@@ -1,8 +1,9 @@
 import React from 'react';
 import { Icon } from '@chakra-ui/react';
+import { IconType } from 'react-icons';
 
 interface Props {
-  icon: any;
+  icon: IconType;
   href: string;
   target: string;
   rel: string;

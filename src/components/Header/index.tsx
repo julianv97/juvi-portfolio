@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Flex, HStack, Divider, Stack } from '@chakra-ui/react';
-import { MdDarkMode } from 'react-icons/md';
-import { BsFillSunFill } from 'react-icons/bs';
-import TooltipIcon from '../TooltipIcon';
+
+import ThemeButton from '../ThemeButton';
 
 const Header = () => {
   return (
@@ -17,8 +16,7 @@ const Header = () => {
           <RouterLink to="/contact">Contact</RouterLink>
         </Flex>
         <Flex>
-          <TooltipIcon label="Dark mode" icon={MdDarkMode} />
-          <TooltipIcon label="Light mode" icon={BsFillSunFill} />
+          <ThemeButton />
         </Flex>
       </HStack>
       <Divider />
