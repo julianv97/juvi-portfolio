@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Button } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
@@ -10,6 +10,7 @@ interface Props {
 }
 
 const ButtonLine: React.FC<Props> = ({ title, path }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const AnimatedArrow = motion(ArrowForwardIcon);
   return (
     <RouterLink to={path}>
@@ -23,9 +24,16 @@ const ButtonLine: React.FC<Props> = ({ title, path }) => {
           color: 'blue.500',
           textDecoration: 'underline',
         }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         {title}
-        <AnimatedArrow />
+        <AnimatedArrow
+          animate={{
+            x: isHovered ? 7 : 0,
+            scale: isHovered ? 1.2 : 1,
+          }}
+        />
       </Button>
     </RouterLink>
   );
