@@ -1,12 +1,12 @@
 import React from 'react';
-import CustomLink from '../../IconLink';
+import IconLink from '../../IconLink';
 import SOCIAL_LINKS from '../constans';
 
 const SocialLinks = () => {
   return (
     <>
       {SOCIAL_LINKS.map((link) => (
-        <CustomLink
+        <IconLink
           key={link.name}
           href={link.url}
           target="_blank"
