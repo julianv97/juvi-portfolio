@@ -17,7 +17,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <FlexContainerAnimated
         width="60%"
         flexDirection="column"
-        justifyContent="space-between"
+        justifyContent="space-around"
         alignItems="center"
         flex={1}
         animate="enter"
