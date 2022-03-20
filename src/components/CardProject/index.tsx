@@ -2,6 +2,7 @@ import React from 'react';
 import { Badge, Box, Flex, Text, Image } from '@chakra-ui/react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 import IconLink from '../IconLink';
 import COLORS from './constants';
 
@@ -9,11 +10,31 @@ interface Props {
   title: string;
   technologies: string[];
   link: string;
+  id: number;
 }
 
-const CardProject: React.FC<Props> = ({ title, technologies, link }) => {
+const variants = {
+  initial: { opacity: 0, y: 50 },
+  enter: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -50 },
+};
+
+const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
+  const AnimatedBox = motion(Box);
   return (
-    <Box borderRadius={10} borderColor="blue.500" p="5" mb={5} borderWidth={1} w="45%">
+    <AnimatedBox
+      borderRadius={10}
+      borderColor="blue.500"
+      p="5"
+      mb={5}
+      borderWidth={1}
+      w="45%"
+      animate="enter"
+      exit="exit"
+      initial="initial"
+      transition={{ duration: 0.5, delay: id * 0.3 }}
+      variants={variants}
+    >
       <Flex>
         <Box w="100%" mr={5}>
           <Text fontSize="lg" fontWeight="bold">
@@ -39,7 +60,7 @@ const CardProject: React.FC<Props> = ({ title, technologies, link }) => {
         w="100%"
         src="https://i.picsum.photos/id/634/200/200.jpg?hmac=3WUmj9wMd1h3UZICk1C5iydU5fixjx0px9jw-LBezgg"
       />
-    </Box>
+    </AnimatedBox>
   );
 };
 

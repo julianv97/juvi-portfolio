@@ -12,7 +12,9 @@ const Projects: React.FC<Props> = ({ amount = PROJECTS.length }) => {
     <Flex w="100%" flexWrap="wrap" justifyContent="space-between ">
       {PROJECTS.slice(0, amount).map((project) => {
         const { id, title, technologies, link } = project;
-        return <CardProject key={id} title={title} technologies={technologies} link={link} />;
+        return (
+          <CardProject key={id} id={id} title={title} technologies={technologies} link={link} />
+        );
       })}
     </Flex>
   );
