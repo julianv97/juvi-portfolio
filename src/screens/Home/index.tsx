@@ -1,8 +1,8 @@
-import { Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import Section from '../../components/Section';
-import Projects from '../Projects';
-import LatestsPosts from '../../components/LatestsPosts';
+import Projects from '../../components/Home/Projects';
+import LatestsPosts from '../../components/Home/LatestsPosts';
 
 const Home = () => {
   return (
