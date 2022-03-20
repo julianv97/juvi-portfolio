@@ -1,8 +1,8 @@
 import React from 'react';
 import { Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import Section from '../../components/Section';
-import Projects from '../../components/Home/Projects';
-import LatestsPosts from '../../components/Home/LatestsPosts';
+import ProjectsList from '../../components/ProjectsList';
+import PostsList from '../../components/PostsList';
 
 const Home = () => {
   return (
@@ -17,8 +17,14 @@ const Home = () => {
           </Stack>
         </HStack>
       </Section>
-      <Projects />
-      <LatestsPosts />
+
+      <Section title="Projects">
+        <ProjectsList />
+      </Section>
+
+      <Section title="Latests Posts">
+        <PostsList />
+      </Section>
     </>
   );
 };
