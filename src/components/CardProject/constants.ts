@@ -1,8 +1,8 @@
-const COLORS = [
+export const COLORS = [
   { stack: 'javascript', color: 'yellow' },
   { stack: 'react', color: 'linkedin' },
   { stack: 'wouter', color: 'green' },
-  { stack: 'react-router', color: 'cyan' },
+  { stack: 'react-router', color: 'red' },
   { stack: 'typescript', color: 'blue' },
   { stack: 'next.js', color: 'gray' },
   { stack: 'chakra-ui', color: 'green' },
@@ -11,4 +11,8 @@ const COLORS = [
   { stack: 'styled-components', color: 'pink' },
 ];
 
-export default COLORS;
+export const VARIANTS = {
+  initial: { opacity: 0, y: 50 },
+  enter: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -50 },
+};

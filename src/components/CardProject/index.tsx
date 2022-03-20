@@ -4,7 +4,7 @@ import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import IconLink from '../IconLink';
-import COLORS from './constants';
+import { COLORS, VARIANTS } from './constants';
 
 interface Props {
   title: string;
@@ -12,12 +12,6 @@ interface Props {
   link: string;
   id: number;
 }
-
-const variants = {
-  initial: { opacity: 0, y: 50 },
-  enter: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -50 },
-};
 
 const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
   const AnimatedBox = motion(Box);
@@ -34,7 +28,7 @@ const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
       exit="exit"
       initial="initial"
       transition={{ duration: 0.5, delay: id * 0.3 }}
-      variants={variants}
+      variants={VARIANTS}
     >
       <Flex>
         <Box w="100%" mr={5}>
