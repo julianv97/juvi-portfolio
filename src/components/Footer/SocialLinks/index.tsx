@@ -1,10 +1,11 @@
+import { Flex } from '@chakra-ui/react';
 import React from 'react';
 import IconLink from '../../IconLink';
 import SOCIAL_LINKS from '../constans';
 
 const SocialLinks = () => {
   return (
-    <>
+    <Flex justifyContent="space-around" w="36">
       {SOCIAL_LINKS.map((link) => (
         <IconLink
           key={link.name}
@@ -16,7 +17,7 @@ const SocialLinks = () => {
           label={link.label}
         />
       ))}
-    </>
+    </Flex>
   );
 };
 

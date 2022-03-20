@@ -1,5 +1,5 @@
 import React from 'react';
-import { VStack } from '@chakra-ui/react';
+import { Flex, VStack } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -12,7 +12,13 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   const FlexContainerAnimated = motion(VStack);
   return (
-    <VStack width="100%" justifyContent="center" alignItems="center" minH="100vh">
+    <Flex
+      flexDirection="column"
+      alignItems="center"
+      width="100%"
+      justifyContent="center"
+      minH="100vh"
+    >
       <Header />
       <FlexContainerAnimated
         width="60%"
@@ -30,7 +36,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         {children}
       </FlexContainerAnimated>
       <Footer />
-    </VStack>
+    </Flex>
   );
 };
 
