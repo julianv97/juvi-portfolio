@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
-    <HStack height="14" width="100%" justifyContent="space-between">
+    <HStack height="14" width="60%" justifyContent="space-between">
       <Flex>
         <Text>Codeado con React y ChakraUI</Text>
       </Flex>

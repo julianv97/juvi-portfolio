@@ -5,7 +5,7 @@ import ThemeButton from '../ThemeButton';
 
 const Header = () => {
   return (
-    <Stack width="100%">
+    <Stack width="60%">
       <HStack height="24" justifyContent="space-between">
         <Flex width="50%" justifyContent="space-around">
           <NavList />
