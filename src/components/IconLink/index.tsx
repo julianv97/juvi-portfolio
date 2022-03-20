@@ -10,6 +10,7 @@ interface Props {
   rel: string;
   hasTooltip?: boolean;
   label?: string;
+  size?: number;
 }
 
 const CustomLink: React.FC<Props> = ({
@@ -19,10 +20,11 @@ const CustomLink: React.FC<Props> = ({
   rel,
   hasTooltip = false,
   label = '',
+  size = 34,
 }) => {
   return (
     <a href={href} target={target} rel={rel}>
-      {hasTooltip ? <TooltipIcon label={label} icon={icon} /> : <Icon boxSize={34} as={icon} />}
+      {hasTooltip ? <TooltipIcon label={label} icon={icon} /> : <Icon boxSize={size} as={icon} />}
     </a>
   );
 };
