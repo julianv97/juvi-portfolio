@@ -21,6 +21,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    'react/require-default-props': 'off',
     quotes: [2, 'single', { avoidEscape: true }],
     'react/function-component-definition': [
       2,

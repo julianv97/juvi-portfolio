@@ -11,7 +11,7 @@ interface Props {
 const CustomLink: React.FC<Props> = ({ icon, href, target, rel }) => {
   return (
     <a href={href} target={target} rel={rel}>
-      <Icon aria-label="ds" as={icon} size="xs" variant="unstyled" />
+      <Icon boxSize={34} as={icon} />
     </a>
   );
 };

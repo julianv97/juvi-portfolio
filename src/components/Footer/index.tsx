@@ -6,7 +6,7 @@ import CustomLink from '../IconLink';
 
 const Footer = () => {
   return (
-    <HStack width="100%" backgroundColor="red.200" justifyContent="space-between">
+    <HStack height="14" width="100%" justifyContent="space-between">
       <Flex>
         <Text>Codeado con React y ChakraUI</Text>
       </Flex>
