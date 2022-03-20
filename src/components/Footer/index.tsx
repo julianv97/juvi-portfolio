@@ -1,12 +1,10 @@
 import React from 'react';
-import { Flex, Text, HStack } from '@chakra-ui/react';
+import { Text, HStack } from '@chakra-ui/react';
 
 const Footer = () => {
   return (
-    <HStack width="100%" backgroundColor="red.200">
-      <Flex justifyContent="center" width="full">
-        <Text>Footer</Text>
-      </Flex>
+    <HStack width="full" backgroundColor="red.200">
+      <Text>Footer</Text>
     </HStack>
   );
 };
