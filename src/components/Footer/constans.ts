@@ -16,6 +16,8 @@ const SOCIAL_LINKS = [
     name: 'Radium Rocket',
     url: 'https://radiumrocket.com/',
     icon: IoMdRocket,
+    hasTooltip: true,
+    label: 'The place I work',
   },
 ];
 

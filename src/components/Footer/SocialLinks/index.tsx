@@ -12,6 +12,8 @@ const SocialLinks = () => {
           target="_blank"
           rel="noreferrer"
           icon={link.icon}
+          hasTooltip={link.hasTooltip}
+          label={link.label}
         />
       ))}
     </>
