@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, HStack, Flex, Icon } from '@chakra-ui/react';
+import { Text, HStack, Flex } from '@chakra-ui/react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { IoMdRocket } from 'react-icons/io';
+import CustomLink from '../IconLink';
 
 const Footer = () => {
   return (
@@ -10,15 +11,26 @@ const Footer = () => {
         <Text>Codeado con React y ChakraUI</Text>
       </Flex>
       <Flex>
-        <a href="https://github.com/julianv97" target="_blank" rel="noreferrer">
-          <Icon as={BsGithub} />
-        </a>
-        <a href="https://www.linkedin.com/in/julian-vicente/" target="_blank" rel="noreferrer">
-          <Icon as={BsLinkedin} />
-        </a>
-        <a href="https://radiumrocket.com/" target="_blank" rel="noreferrer">
-          <Icon as={IoMdRocket} />
-        </a>
+        <CustomLink
+          href="https://github.com/julianv97"
+          target="_blank"
+          rel="noreferrer"
+          icon={BsGithub}
+        />
+
+        <CustomLink
+          href="https://www.linkedin.com/in/julian-vicente/"
+          target="_blank"
+          rel="noreferrer"
+          icon={BsLinkedin}
+        />
+
+        <CustomLink
+          href="https://radiumrocket.com/"
+          target="_blank"
+          rel="noreferrer"
+          icon={IoMdRocket}
+        />
       </Flex>
     </HStack>
   );
