@@ -10,9 +10,15 @@ const Footer = () => {
         <Text>Codeado con React y ChakraUI</Text>
       </Flex>
       <Flex>
-        <Icon as={BsGithub} />
-        <Icon as={BsLinkedin} />
-        <Icon as={IoMdRocket} />
+        <a href="https://github.com/julianv97" target="_blank" rel="noreferrer">
+          <Icon as={BsGithub} />
+        </a>
+        <a href="https://www.linkedin.com/in/julian-vicente/" target="_blank" rel="noreferrer">
+          <Icon as={BsLinkedin} />
+        </a>
+        <a href="https://radiumrocket.com/" target="_blank" rel="noreferrer">
+          <Icon as={IoMdRocket} />
+        </a>
       </Flex>
     </HStack>
   );
