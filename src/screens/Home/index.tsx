@@ -11,7 +11,7 @@ const Home = () => {
     <Flex flexDirection="column" alignItems="center" w="full">
       <Section>
         <HStack>
-          <Stack justifyContent="flex-start">
+          <Stack w="100%" justifyContent="flex-start">
             <Heading>Julián Vicente</Heading>
             <Text color="blue.500" fontSize="lg" fontWeight="regular" letterSpacing="tighter">
               FullStack Developer ( Web / Mobile / Self-Taught )

@@ -21,6 +21,7 @@ const variants = {
 
 const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
   const AnimatedBox = motion(Box);
+  const AnimatedImage = motion(Image);
   return (
     <AnimatedBox
       borderRadius={10}
@@ -56,9 +57,12 @@ const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
           );
         })}
       </Flex>
-      <Image
+      <AnimatedImage
+        borderRadius={10}
+        boxSize="200px"
         w="100%"
         src="https://i.picsum.photos/id/634/200/200.jpg?hmac=3WUmj9wMd1h3UZICk1C5iydU5fixjx0px9jw-LBezgg"
+        whileHover={{ scale: 1.05 }}
       />
     </AnimatedBox>
   );
