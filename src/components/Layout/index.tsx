@@ -29,9 +29,9 @@ const Layout: React.FC<Props> = ({ children }) => {
         animate="enter"
         exit="exit"
         initial="initial"
-        pos="relative"
         transition={{ duration: 0.4, ease: 'easeInOut' }}
         variants={VARIANTS}
+        mt={20}
       >
         {children}
       </FlexContainerAnimated>
