@@ -19,10 +19,10 @@ const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
   return (
     <AnimatedBox
       borderRadius={10}
-      borderColor="blue.500"
       p="5"
       mb={5}
       borderWidth={1}
+      borderColor="blue.500"
       w="45%"
       animate="enter"
       exit="exit"

@@ -45,7 +45,7 @@ const Home = () => {
       </Section>
 
       <Section title="Latests Posts">
-        <PostsList />
+        <PostsList amount={1} />
         <ButtonLine title="View more" path="/blog" />
       </Section>
     </Flex>
