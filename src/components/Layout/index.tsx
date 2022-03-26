@@ -24,7 +24,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         width="60%"
         h="full"
         flexDirection="column"
-        alignItems="flex-start"
+        alignItems="center"
         flex={1}
         animate="enter"
         exit="exit"
