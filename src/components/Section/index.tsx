@@ -8,7 +8,7 @@ interface Props {
 
 const Section: React.FC<Props> = ({ title = '', children }) => {
   return (
-    <Stack marginTop={20} width="80%" justifyContent="flex-start">
+    <Stack marginTop={20} width="80%">
       <Heading as="h2" size="lg" mb={4}>
         {title}
       </Heading>

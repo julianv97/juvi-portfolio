@@ -22,16 +22,15 @@ const Layout: React.FC<Props> = ({ children }) => {
       <Header />
       <FlexContainerAnimated
         width="60%"
+        h="full"
         flexDirection="column"
-        justifyContent="space-around"
-        alignItems="center"
+        alignItems="flex-start"
         flex={1}
         animate="enter"
         exit="exit"
         initial="initial"
         transition={{ duration: 0.4, ease: 'easeInOut' }}
         variants={VARIANTS}
-        mt={20}
       >
         {children}
       </FlexContainerAnimated>
