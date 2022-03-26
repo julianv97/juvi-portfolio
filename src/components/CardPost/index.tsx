@@ -20,9 +20,10 @@ const CardPost: React.FC<Props> = ({ title, date, image }) => {
         backgroundColor: color,
       }}
       mb={5}
+      borderRadius={10}
       cursor="pointer"
     >
-      <Image src={image} />
+      <Image borderLeftRadius={10} src={image} />
       <Flex flexDirection="column" justifyContent="space-between" pl={2}>
         <Text fontSize="lg" fontWeight="bold" mb={2}>
           {title}
