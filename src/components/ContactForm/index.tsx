@@ -7,6 +7,8 @@ import {
   Button,
   Textarea,
   VStack,
+  useToast,
+  Flex,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 
@@ -22,20 +24,30 @@ const ContactForm: React.FC = () => {
     register,
     formState: { errors, isSubmitting },
   } = useForm<FormData>();
+  const toast = useToast();
 
   const onSubmit = (data: FormData) => {
     console.log(data);
+    toast.closeAll();
+    toast({
+      title: 'Email sent!',
+      description: 'Thank you for your message!',
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    });
   };
 
   return (
-    <VStack w="full">
+    <VStack>
       <form
         style={{
           width: '70%',
         }}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <FormControl>
+        {/* @ts-ignore */}
+        <FormControl isInvalid={errors.name}>
           <FormLabel htmlFor="name">Your name</FormLabel>
           <Input
             id="name"
@@ -58,19 +70,15 @@ const ContactForm: React.FC = () => {
           />
           <FormErrorMessage>{errors.email && errors.email.message}</FormErrorMessage>
 
-          <FormLabel htmlFor="email">Message</FormLabel>
-          <Textarea
-            id="message"
-            placeholder="message"
-            {...register('message', {
-              minLength: { value: 4, message: 'Minimum length should be 4' },
-            })}
-          />
-          <FormErrorMessage>{errors.message && errors.message.message}</FormErrorMessage>
+          <FormLabel htmlFor="message">Message</FormLabel>
+          <Textarea id="message" placeholder="message" {...register('message')} />
+          <FormErrorMessage>{errors.message && 'Minimum length should be 4'}</FormErrorMessage>
         </FormControl>
-        <Button mt={4} colorScheme="teal" isLoading={isSubmitting} type="submit">
-          Submit
-        </Button>
+        <Flex justifyContent="center" w="full">
+          <Button w="60%" mt={4} colorScheme="teal" isLoading={isSubmitting} type="submit">
+            Submit
+          </Button>
+        </Flex>
       </form>
     </VStack>
   );
