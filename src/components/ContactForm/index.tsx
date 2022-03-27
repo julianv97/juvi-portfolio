@@ -1,16 +1,8 @@
 import React from 'react';
-import {
-  FormErrorMessage,
-  FormLabel,
-  FormControl,
-  Input,
-  Button,
-  Textarea,
-  VStack,
-  useToast,
-  Flex,
-} from '@chakra-ui/react';
+import { Button, VStack, useToast, Flex } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
+import CustomInput from '../CustomInput';
+import CustomTextArea from '../CustomTextArea';
 
 type FormData = {
   name: string;
@@ -48,45 +40,41 @@ const ContactForm: React.FC = () => {
         }}
         onSubmit={handleSubmit(onSubmit)}
       >
-        {/* @ts-ignore */}
-        <FormControl isInvalid={errors.name}>
-          <FormLabel htmlFor="name">Your name</FormLabel>
-          <Input
-            id="name"
-            placeholder="name"
-            {...register('name', {
-              required: 'This is required',
-              minLength: { value: 4, message: 'Minimum length should be 4' },
-            })}
-          />
-          <FormErrorMessage>{errors.name && errors.name.message}</FormErrorMessage>
-        </FormControl>
-        {/* @ts-ignore */}
-        <FormControl isInvalid={errors.email}>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <Input
-            id="email"
-            placeholder="email"
-            {...register('email', {
-              required: 'This is required',
-              minLength: { value: 4, message: 'Minimum length should be 4' },
-            })}
-          />
-          <FormErrorMessage>{errors.email && errors.email.message}</FormErrorMessage>
-        </FormControl>
-        {/* @ts-ignore */}
-        <FormControl isInvalid={errors.message}>
-          <FormLabel htmlFor="message">Message</FormLabel>
-          <Textarea
-            id="message"
-            placeholder="message"
-            {...register('message', {
-              required: 'This is required',
-              minLength: { value: 4, message: 'Minimum length should be 4' },
-            })}
-          />
-          <FormErrorMessage>{errors.message && 'Minimum length should be 4'}</FormErrorMessage>
-        </FormControl>
+        <CustomInput
+          name="name"
+          placeholder="Your name"
+          label="Name"
+          register={register}
+          errors={errors.name}
+          rules={{
+            required: 'This is required',
+            minLength: { value: 4, message: 'Minimum length should be 4' },
+          }}
+        />
+
+        <CustomInput
+          name="email"
+          placeholder="Your email"
+          label="Email"
+          register={register}
+          errors={errors.email}
+          rules={{
+            required: 'This is required',
+            minLength: { value: 4, message: 'Minimum length should be 4' },
+          }}
+        />
+
+        <CustomTextArea
+          name="message"
+          placeholder="Your message"
+          label="Message"
+          register={register}
+          errors={errors.message}
+          rules={{
+            required: 'This is required',
+            minLength: { value: 4, message: 'Minimum length should be 4' },
+          }}
+        />
         <Flex justifyContent="center" w="full">
           <Button w="60%" mt={4} colorScheme="teal" isLoading={isSubmitting} type="submit">
             Submit
