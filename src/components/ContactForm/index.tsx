@@ -23,6 +23,7 @@ const ContactForm: React.FC = () => {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm<FormData>();
   const toast = useToast();
 
@@ -36,6 +37,7 @@ const ContactForm: React.FC = () => {
       duration: 3000,
       isClosable: true,
     });
+    reset();
   };
 
   return (
