@@ -58,7 +58,9 @@ const ContactForm: React.FC = () => {
             })}
           />
           <FormErrorMessage>{errors.name && errors.name.message}</FormErrorMessage>
-
+        </FormControl>
+        {/* @ts-ignore */}
+        <FormControl isInvalid={errors.email}>
           <FormLabel htmlFor="email">Email</FormLabel>
           <Input
             id="email"
@@ -69,9 +71,18 @@ const ContactForm: React.FC = () => {
             })}
           />
           <FormErrorMessage>{errors.email && errors.email.message}</FormErrorMessage>
-
+        </FormControl>
+        {/* @ts-ignore */}
+        <FormControl isInvalid={errors.message}>
           <FormLabel htmlFor="message">Message</FormLabel>
-          <Textarea id="message" placeholder="message" {...register('message')} />
+          <Textarea
+            id="message"
+            placeholder="message"
+            {...register('message', {
+              required: 'This is required',
+              minLength: { value: 4, message: 'Minimum length should be 4' },
+            })}
+          />
           <FormErrorMessage>{errors.message && 'Minimum length should be 4'}</FormErrorMessage>
         </FormControl>
         <Flex justifyContent="center" w="full">
