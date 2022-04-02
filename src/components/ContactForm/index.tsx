@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, VStack, useToast, Flex } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 import CustomInput from '../CustomInput';
 import CustomTextArea from '../CustomTextArea';
 
@@ -17,24 +18,40 @@ const ContactForm: React.FC = () => {
     formState: { errors, isSubmitting },
     reset,
   } = useForm<FormData>();
+  const form = useRef();
   const toast = useToast();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = () => {
     toast.closeAll();
-    toast({
-      title: 'Email sent!',
-      description: 'Thank you for your message!',
-      status: 'success',
-      duration: 3000,
-      isClosable: true,
-    });
+
+    emailjs
+      .sendForm('service_3q0bws9', 'template_zciot1r', form.current, 'MoV0QBVeYeUrC283-')
+      .then(() => {
+        toast({
+          title: 'Email sent!',
+          description: 'Thank you for your message!',
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        });
+      })
+      .catch(() => {
+        toast({
+          title: 'Error',
+          description: 'Something went wrong, please try again later.',
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        });
+      });
+
     reset();
   };
 
   return (
     <VStack>
       <form
+        ref={form}
         style={{
           width: '70%',
         }}
