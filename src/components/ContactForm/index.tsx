@@ -25,6 +25,7 @@ const ContactForm: React.FC = () => {
     toast.closeAll();
 
     emailjs
+      // @ts-ignore
       .sendForm('service_3q0bws9', 'template_zciot1r', form.current, 'MoV0QBVeYeUrC283-')
       .then(() => {
         toast({
@@ -51,6 +52,7 @@ const ContactForm: React.FC = () => {
   return (
     <VStack>
       <form
+        // @ts-ignore
         ref={form}
         style={{
           width: '70%',
