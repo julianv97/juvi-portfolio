@@ -16,12 +16,12 @@ const CardPost: React.FC<Props> = ({ title, date, image, id }) => {
   return (
     <AnimatedBox
       borderRadius={10}
-      p="5"
       animate="enter"
       exit="exit"
       initial="initial"
       transition={{ duration: 0.5, delay: id * 0.3 }}
       variants={VARIANTS}
+      mb={5}
     >
       <AnimatedBox
         whileHover={{
