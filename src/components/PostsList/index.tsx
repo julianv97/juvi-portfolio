@@ -14,7 +14,7 @@ const PostsList: React.FC<Props> = ({ posts, amount = POSTS.length }) => {
     <Flex w="100%" flexDirection="column">
       {posts.slice(0, amount).map((post) => {
         const { id, title, date, image } = post;
-        return <CardPost key={id} title={title} date={date} image={image} />;
+        return <CardPost key={id} title={title} date={date} image={image} id={id} />;
       })}
     </Flex>
   );
