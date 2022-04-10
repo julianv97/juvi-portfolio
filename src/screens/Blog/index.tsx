@@ -8,8 +8,10 @@ import SearchInput from '../../components/SearchInput';
 
 const Blog = () => {
   const [posts, setPosts] = useState<IPost[]>(POSTS);
+  const [isFiltered, setIsFiltered] = useState(false);
 
   const handleFilter = (filter: string) => {
+    setIsFiltered(true);
     const filteredPosts = posts.filter((post) =>
       post.title.toLowerCase().includes(filter.toLowerCase()),
     );
@@ -31,7 +33,7 @@ const Blog = () => {
 
       <Section>
         <SearchInput handleFilter={handleFilter} />
-        <PostsList posts={posts} amount={5} />
+        <PostsList posts={posts} amount={5} isFiltered={isFiltered} />
       </Section>
 
       <Section title="Recommended blogs">
