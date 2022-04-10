@@ -34,6 +34,8 @@ const CardPost: React.FC<Props> = ({ title, date, image, id, isFiltered }) => {
         }}
         mb={1}
         borderRadius={10}
+        borderColor={color}
+        borderWidth={1}
         cursor="pointer"
         w="100%"
       >
