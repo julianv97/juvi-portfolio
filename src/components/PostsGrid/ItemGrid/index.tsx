@@ -13,22 +13,22 @@ const ItemGrid: React.FC<Props> = ({ title, description, url }) => {
   const AnimatedBox = motion(Flex);
 
   return (
-    <AnimatedBox
-      whileHover={{
-        scale: 1.05,
-      }}
-      _hover={{
-        backgroundColor: color,
-      }}
-      mb={1}
-      borderRadius={10}
-      borderColor={color}
-      borderWidth={1}
-      cursor="pointer"
-      w="100%"
-      minHeight="120px"
-    >
-      <a href={url} target="_blank" rel="noreferrer">
+    <a href={url} target="_blank" rel="noreferrer">
+      <AnimatedBox
+        whileHover={{
+          scale: 1.05,
+        }}
+        _hover={{
+          backgroundColor: color,
+        }}
+        mb={1}
+        borderRadius={10}
+        borderColor={color}
+        borderWidth={1}
+        cursor="pointer"
+        w="100%"
+        minHeight="120px"
+      >
         <Flex
           flexDirection="column"
           justifyContent="flex-start"
@@ -45,8 +45,8 @@ const ItemGrid: React.FC<Props> = ({ title, description, url }) => {
             {description}
           </Text>
         </Flex>
-      </a>
-    </AnimatedBox>
+      </AnimatedBox>
+    </a>
   );
 };
 
