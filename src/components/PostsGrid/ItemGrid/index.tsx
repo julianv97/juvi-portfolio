@@ -28,6 +28,7 @@ const ItemGrid: React.FC<Props> = ({ title, description, url }) => {
         cursor="pointer"
         w="100%"
         minHeight="120px"
+        minWidth="200px"
       >
         <Flex
           flexDirection="column"
