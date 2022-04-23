@@ -9,7 +9,7 @@ interface Props {
 
 const SearchInput: React.FC<Props> = ({ handleFilter }) => {
   return (
-    <InputGroup>
+    <InputGroup mb="10">
       <InputLeftElement pointerEvents="none">
         <CgSearch color="gray.300" />
       </InputLeftElement>

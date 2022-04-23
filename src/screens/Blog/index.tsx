@@ -5,6 +5,7 @@ import PostsList from '../../components/PostsList';
 import POSTS from '../../components/PostsList/constants';
 import IPost from '../../interfaces';
 import SearchInput from '../../components/SearchInput';
+import PostsGrid from '../../components/PostsGrid';
 
 const Blog = () => {
   const [posts, setPosts] = useState<IPost[]>(POSTS);
@@ -43,7 +44,7 @@ const Blog = () => {
           share some blogs (mainly Front-end) that I consider very valuable and that may be of use
           to you.
         </Text>
-        <Text>CREAR UN GRID</Text>
+        <PostsGrid />
       </Section>
     </Flex>
   );

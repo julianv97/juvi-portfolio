@@ -8,6 +8,7 @@ interface Props {
   title: string;
   date: string;
   image: string;
+
   isFiltered: boolean;
 }
 
