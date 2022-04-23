@@ -8,7 +8,7 @@ import NotFound from '../NotFound';
 interface Props {
   posts: IPost[];
   amount: number;
-  isFiltered: boolean;
+  isFiltered?: boolean;
 }
 
 const PostsList: React.FC<Props> = ({ posts, amount = POSTS.length, isFiltered }) => {
