@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import CardPost from '../CardPost';
-import POSTS from './constants';
+import POSTS from '../../data/postsList';
 import IPost from '../../interfaces';
 import NotFound from '../NotFound';
 

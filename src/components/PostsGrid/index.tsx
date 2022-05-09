@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, GridItem } from '@chakra-ui/react';
 import ItemGrid from './ItemGrid';
-import { RECOMMENDED_POSTS } from '../PostsList/constants';
+import { RECOMMENDED_POSTS } from '../../data/postsList';
 
 const PostsGrid = () => {
   return (

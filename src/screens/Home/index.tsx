@@ -7,7 +7,7 @@ import ProjectsList from '../../components/ProjectsList';
 import PostsList from '../../components/PostsList';
 import ButtonLine from '../../components/ButtonLine';
 import IconLink from '../../components/IconLink';
-import POSTS from '../../components/PostsList/constants';
+import POSTS from '../../data/postsList';
 
 const Home = () => {
   const AnimatedIcon = motion(Flex);
