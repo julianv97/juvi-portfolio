@@ -10,7 +10,7 @@ const SinglePostPage: React.FC = () => {
   return (
     <Flex flexDirection="column" alignItems="center" w="full">
       <HStack marginTop={20} w="80%">
-        <Image src={post?.image} />
+        <Image w={100} h={100} src={post?.image} />
         <Stack w="100%" justifyContent="flex-start">
           <Heading fontSize={30}>{post?.title}</Heading>
         </Stack>

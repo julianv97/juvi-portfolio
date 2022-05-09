@@ -39,7 +39,7 @@ const CardPost: React.FC<Props> = ({ title, date, image, id, isFiltered }) => {
         cursor="pointer"
         w="100%"
       >
-        <Image borderLeftRadius={10} src={image} />
+        <Image src={image} borderLeftRadius={10} w={100} h={100} />
         <Flex flexDirection="column" justifyContent="space-between" pl={2} paddingY={2}>
           <Text fontSize="lg" fontWeight="bold" mb={2}>
             {title}
