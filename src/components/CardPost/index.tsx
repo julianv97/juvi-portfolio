@@ -8,8 +8,7 @@ interface Props {
   title: string;
   date: string;
   image: string;
-
-  isFiltered: boolean;
+  isFiltered: boolean | undefined;
 }
 
 const CardPost: React.FC<Props> = ({ title, date, image, id, isFiltered }) => {
@@ -41,7 +40,7 @@ const CardPost: React.FC<Props> = ({ title, date, image, id, isFiltered }) => {
         w="100%"
       >
         <Image borderLeftRadius={10} src={image} />
-        <Flex flexDirection="column" justifyContent="space-between" pl={2}>
+        <Flex flexDirection="column" justifyContent="space-between" pl={2} paddingY={2}>
           <Text fontSize="lg" fontWeight="bold" mb={2}>
             {title}
           </Text>

@@ -9,8 +9,8 @@ const PostsGrid = () => {
       {RECOMMENDED_POSTS.map((post) => {
         const { id, title, description, url } = post;
         return (
-          <GridItem>
-            <ItemGrid key={id} title={title} description={description} url={url} />
+          <GridItem key={id}>
+            <ItemGrid title={title} description={description} url={url} />
           </GridItem>
         );
       })}
