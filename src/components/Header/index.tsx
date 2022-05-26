@@ -9,7 +9,7 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Stack width={['100%', '80%', '80%', '80%']}>
+    <Stack width={['100%', '80%', '80%', '60%']}>
       <HStack height="24" justifyContent="space-between">
         <Box display={['block', 'block', 'none']}>
           <HiMenuAlt4

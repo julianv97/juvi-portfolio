@@ -7,7 +7,6 @@ import {
   DrawerCloseButton,
   DrawerBody,
   DrawerFooter,
-  Button,
 } from '@chakra-ui/react';
 import NavList from '../Header/NavList';
 
@@ -22,19 +21,15 @@ const CustomDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
       <DrawerOverlay />
       <DrawerContent>
         <DrawerHeader>
-          <DrawerCloseButton margin={2} ml={5} position="relative" left={0} />
+          <DrawerCloseButton position="relative" left={0} />
         </DrawerHeader>
 
         <DrawerBody>
           <NavList />
+          <i className="fa-solid fa-j" />
         </DrawerBody>
 
-        <DrawerFooter>
-          <Button variant="outline" mr={3} onClick={onClose}>
-            Cancel
-          </Button>
-          <Button colorScheme="blue">Save</Button>
-        </DrawerFooter>
+        <DrawerFooter />
       </DrawerContent>
     </Drawer>
   );
