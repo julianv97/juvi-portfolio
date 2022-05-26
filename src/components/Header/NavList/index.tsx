@@ -7,7 +7,7 @@ const NavList = () => {
   return (
     <Flex w="100%" flexDirection={['column', 'column', 'row']} justifyContent="space-between">
       {NAV_LINKS.map((link) => (
-        <Box mt={['20px', '20px', '15px', '0px']}>
+        <Box mt={['20px', '20px', '15px', '0px']} fontSize={['lg', 'lg', 'lg', 'lg']}>
           <RouterLink key={link.name} to={link.path}>
             {link.name}
           </RouterLink>

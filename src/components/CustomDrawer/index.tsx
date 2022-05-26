@@ -26,10 +26,9 @@ const CustomDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
 
         <DrawerBody>
           <NavList />
-          <i className="fa-solid fa-j" />
         </DrawerBody>
 
-        <DrawerFooter />
+        <DrawerFooter>Julián Vicente</DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
