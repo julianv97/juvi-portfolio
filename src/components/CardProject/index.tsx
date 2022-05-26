@@ -23,7 +23,7 @@ const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
       mb={5}
       borderWidth={1}
       borderColor="blue.500"
-      w="45%"
+      w={['100%', '80%', '45%', '45%', '45%', '45%']}
       animate="enter"
       exit="exit"
       initial="initial"
@@ -41,13 +41,19 @@ const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
           <IconLink icon={FiExternalLink} href={link} target="_blank" rel="noreferrer" />
         </Flex>
       </Flex>
-      <Flex w="full" flexWrap="wrap">
+      <Flex
+        width="100%"
+        h={['80px', '80px', '90px', '90px', '70px']}
+        flexWrap={technologies.length > 3 ? 'wrap' : 'nowrap'}
+      >
         {technologies.map((stack) => {
           const color = COLORS.find((colorItem) => colorItem.stack === stack);
           return (
-            <Badge marginY={1} mb={2} mr={5} key={stack} colorScheme={color?.color}>
-              {stack}
-            </Badge>
+            <Box>
+              <Badge marginY={1} mb={2} mr={5} key={stack} colorScheme={color?.color}>
+                {stack}
+              </Badge>
+            </Box>
           );
         })}
       </Flex>

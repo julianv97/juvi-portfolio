@@ -13,7 +13,7 @@ const Home = () => {
   const AnimatedIcon = motion(Flex);
   return (
     <Flex flexDirection="column" alignItems="center" w="full">
-      <HStack marginTop={20} w="80%">
+      <HStack marginTop={20} width={['100%', '100%', '80%', '80%']}>
         <Stack w="100%" justifyContent="flex-start">
           <Heading>Julián Vicente</Heading>
           <Text color="blue.500" fontSize="lg" fontWeight="regular" letterSpacing="tighter">

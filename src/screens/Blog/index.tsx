@@ -22,7 +22,7 @@ const Blog = () => {
 
   return (
     <Flex flexDirection="column" alignItems="center" w="full">
-      <HStack marginTop={20} w="80%">
+      <HStack marginTop={20} width={['100%', '100%', '80%', '80%']}>
         <Stack w="100%" justifyContent="flex-start">
           <Heading>Blog</Heading>
           <Text>

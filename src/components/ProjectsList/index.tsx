@@ -9,7 +9,12 @@ interface Props {
 
 const Projects: React.FC<Props> = ({ amount = PROJECTS.length }) => {
   return (
-    <Flex w="100%" flexWrap="wrap" justifyContent="space-between ">
+    <Flex
+      w="100%"
+      flexDirection="row"
+      flexWrap="wrap"
+      justifyContent={['center', 'center', 'space-between']}
+    >
       {PROJECTS.slice(0, amount).map((project) => {
         const { id, title, technologies, link } = project;
         return (

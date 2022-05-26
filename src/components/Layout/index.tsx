@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     >
       <Header />
       <FlexContainerAnimated
-        width="60%"
+        width={['90%', '80%', '70%', '60%']}
         h="full"
         flexDirection="column"
         alignItems="center"
