@@ -1,4 +1,4 @@
-interface IPost {
+export interface IPost {
   id: number;
   title: string;
   body: string;
@@ -6,4 +6,11 @@ interface IPost {
   image: string;
 }
 
-export default IPost;
+export interface IProject {
+  id: number;
+  title: string;
+  technologies: string[];
+  repositoryLink: string;
+  liveLink: string;
+  image?: string;
+}

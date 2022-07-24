@@ -5,15 +5,14 @@ import { FiExternalLink } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import IconLink from '../IconLink';
 import { COLORS, VARIANTS } from './constants';
+import { IProject } from '../../interfaces';
 
 interface Props {
-  title: string;
-  technologies: string[];
-  link: string;
-  id: number;
+  project: IProject;
 }
 
-const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
+const CardProject: React.FC<Props> = ({ project }) => {
+  const { id, title, technologies, repositoryLink, liveLink } = project;
   const AnimatedBox = motion(Box);
   const AnimatedImage = motion(Image);
   return (
@@ -37,8 +36,8 @@ const CardProject: React.FC<Props> = ({ title, technologies, link, id }) => {
           </Text>
         </Box>
         <Flex w="40%" justifyContent="space-around">
-          <IconLink icon={AiFillGithub} href={link} target="_blank" rel="noreferrer" />
-          <IconLink icon={FiExternalLink} href={link} target="_blank" rel="noreferrer" />
+          <IconLink icon={AiFillGithub} href={repositoryLink} target="_blank" rel="noreferrer" />
+          <IconLink icon={FiExternalLink} href={liveLink} target="_blank" rel="noreferrer" />
         </Flex>
       </Flex>
       <Flex

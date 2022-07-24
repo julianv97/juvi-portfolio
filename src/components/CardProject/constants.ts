@@ -2,7 +2,7 @@ export const COLORS = [
   { stack: 'javascript', color: 'yellow' },
   { stack: 'react', color: 'linkedin' },
   { stack: 'wouter', color: 'green' },
-  { stack: 'react-router', color: 'red' },
+  { stack: 'react-router-dom', color: 'red' },
   { stack: 'typescript', color: 'blue' },
   { stack: 'next.js', color: 'gray' },
   { stack: 'chakra-ui', color: 'green' },

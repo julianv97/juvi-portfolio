@@ -16,10 +16,7 @@ const Projects: React.FC<Props> = ({ amount = PROJECTS.length }) => {
       justifyContent={['center', 'center', 'space-between']}
     >
       {PROJECTS.slice(0, amount).map((project) => {
-        const { id, title, technologies, link } = project;
-        return (
-          <CardProject key={id} id={id} title={title} technologies={technologies} link={link} />
-        );
+        return <CardProject key={project.id} project={project} />;
       })}
     </Flex>
   );
