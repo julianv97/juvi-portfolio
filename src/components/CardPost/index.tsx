@@ -8,10 +8,11 @@ interface Props {
   title: string;
   date: string;
   image: string;
+  lectureTime?: string;
   isFiltered: boolean | undefined;
 }
 
-const CardPost: React.FC<Props> = ({ title, date, image, id, isFiltered }) => {
+const CardPost: React.FC<Props> = ({ title, date, image, id, lectureTime, isFiltered }) => {
   const color = useColorModeValue('gray.200', 'gray.700');
   const AnimatedBox = motion(Flex);
 
@@ -40,13 +41,18 @@ const CardPost: React.FC<Props> = ({ title, date, image, id, isFiltered }) => {
         w="100%"
       >
         <Image src={image} borderLeftRadius={10} w={100} h={100} />
-        <Flex flexDirection="column" justifyContent="space-between" pl={2} paddingY={2}>
+        <Flex w="100%" flexDirection="column" justifyContent="space-between" pl={2} paddingY={2}>
           <Text fontSize="lg" fontWeight="bold" mb={2}>
             {title}
           </Text>
-          <Text fontWeight="light" fontSize="sm">
-            {date}
-          </Text>
+          <Flex justifyContent="space-between">
+            <Text fontWeight="light" fontSize="sm">
+              {date}
+            </Text>
+            <Text fontWeight="light" fontSize="sm" mr={2}>
+              {lectureTime}
+            </Text>
+          </Flex>
         </Flex>
       </AnimatedBox>
     </AnimatedBox>

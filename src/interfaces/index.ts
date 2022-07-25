@@ -4,6 +4,8 @@ export interface IPost {
   body: string;
   date: string;
   image: string;
+  lectureTime: string;
+  path: string;
 }
 
 export interface IProject {

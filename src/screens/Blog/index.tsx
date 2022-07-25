@@ -3,7 +3,7 @@ import { Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 import Section from '../../components/Section';
 import PostsList from '../../components/PostsList';
 import POSTS from '../../data/postsList';
-import IPost from '../../interfaces';
+import { IPost } from '../../interfaces';
 import SearchInput from '../../components/SearchInput';
 import PostsGrid from '../../components/PostsGrid';
 
