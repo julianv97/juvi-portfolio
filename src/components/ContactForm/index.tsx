@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
           }}
         />
         <Flex justifyContent="center" w="full">
-          <Button w="60%" mt={8} colorScheme="teal" isLoading={isSubmitting} type="submit">
+          <Button w="60%" mt={8} bg="blue.500" color="white" isLoading={isSubmitting} type="submit">
             Submit
           </Button>
         </Flex>
