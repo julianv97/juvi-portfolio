@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, VStack, useToast, Flex } from '@chakra-ui/react';
+import { Button, VStack, useToast, Flex, Box } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import CustomInput from '../CustomInput';
@@ -59,29 +59,32 @@ const ContactForm: React.FC = () => {
         }}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <CustomInput
-          name="name"
-          placeholder="Your name"
-          label="Name"
-          register={register}
-          errors={errors.name}
-          rules={{
-            required: 'This is required',
-            minLength: { value: 4, message: 'Minimum length should be 4' },
-          }}
-        />
-
-        <CustomInput
-          name="email"
-          placeholder="Your email"
-          label="Email"
-          register={register}
-          errors={errors.email}
-          rules={{
-            required: 'This is required',
-            minLength: { value: 4, message: 'Minimum length should be 4' },
-          }}
-        />
+        <Box mb={6}>
+          <CustomInput
+            name="name"
+            placeholder="Your name"
+            label="Name"
+            register={register}
+            errors={errors.name}
+            rules={{
+              required: 'This is required',
+              minLength: { value: 4, message: 'Minimum length should be 4' },
+            }}
+          />
+        </Box>
+        <Box mb={6}>
+          <CustomInput
+            name="email"
+            placeholder="Your email"
+            label="Email"
+            register={register}
+            errors={errors.email}
+            rules={{
+              required: 'This is required',
+              minLength: { value: 4, message: 'Minimum length should be 4' },
+            }}
+          />
+        </Box>
 
         <CustomTextArea
           name="message"
@@ -95,7 +98,7 @@ const ContactForm: React.FC = () => {
           }}
         />
         <Flex justifyContent="center" w="full">
-          <Button w="60%" mt={4} colorScheme="teal" isLoading={isSubmitting} type="submit">
+          <Button w="60%" mt={8} colorScheme="teal" isLoading={isSubmitting} type="submit">
             Submit
           </Button>
         </Flex>
