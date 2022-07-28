@@ -15,4 +15,5 @@ export interface IProject {
   repositoryLink: string;
   liveLink: string;
   image?: string;
+  description?: string;
 }
