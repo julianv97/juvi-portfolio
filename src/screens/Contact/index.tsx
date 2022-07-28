@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Flex, Heading, Text, Box } from '@chakra-ui/react';
+import { Button, Flex, Heading, Text, Box, Link } from '@chakra-ui/react';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 import ContactForm from '../../components/ContactForm';
@@ -12,14 +12,21 @@ const Contacts = () => {
         Contact
       </Heading>
       <Flex direction="column" alignItems="start">
-        <Button leftIcon={<MdEmail size="30" />} bg="inherit" mb={6}>
-          <a href="mailto:julian.vicente97s@gmail.com">Here is my email!</a>
-        </Button>
-        <Button leftIcon={<AiFillLinkedin size="30" />} bg="inherit" mb={6}>
-          <a href="https://www.linkedin.com/in/julian-vicente/" target="_blank" rel="noreferrer">
-            You can contact me in Linkedin!
-          </a>
-        </Button>
+        <Link style={{ textDecoration: 'none' }} href="mailto:julian.vicente97s@gmail.com">
+          <Button leftIcon={<MdEmail size="30" />} bg="inherit" mb={6}>
+            <Text>Here is my email!</Text>
+          </Button>
+        </Link>
+        <Link
+          style={{ textDecoration: 'none' }}
+          href="https://www.linkedin.com/in/julian-vicente/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button leftIcon={<AiFillLinkedin size="30" />} bg="inherit" mb={6}>
+            <Text>You can contact me in Linkedin!</Text>
+          </Button>
+        </Link>
       </Flex>
       <Box pl={5} pb={7}>
         <Text fontWeight="semibold">
