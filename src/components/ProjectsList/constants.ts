@@ -24,7 +24,7 @@ const PROJECTS: IProject[] = [
   {
     id: 3,
     title: 'Project 3',
-    technologies: ['React', 'Redux', 'TypeScript'],
+    technologies: ['react', 'redux', 'typescript'],
     repositoryLink: '',
     liveLink: 'https://countries-finder-julianv97.vercel.app/',
     image: 'https://via.placeholder.com/500x300',

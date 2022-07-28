@@ -1,8 +1,9 @@
 import React from 'react';
-import { Flex, Heading, Box, Image, Text } from '@chakra-ui/react';
+import { Flex, Heading, Box, Image, Text, Badge } from '@chakra-ui/react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 import IconLink from '../IconLink';
+import { COLORS } from './constants';
 
 interface Props {
   title: string;
@@ -48,11 +49,16 @@ const ProjectBanner: React.FC<Props> = ({
           </Text>
         </Box>
         <Flex w="38%" wrap="wrap" justifyContent="space-around">
-          {technologies.slice(0, 3).map((tech) => (
-            <Text fontSize="sm" lineHeight={8} pb={5}>
-              {tech}
-            </Text>
-          ))}
+          {technologies.slice(0, 3).map((tech) => {
+            const color = COLORS.find((colorItem) => colorItem.stack === tech);
+            return (
+              <Box>
+                <Badge mr={1} key={tech} colorScheme={color?.color}>
+                  {tech}
+                </Badge>
+              </Box>
+            );
+          })}
         </Flex>
         <Flex justifyContent="space-between" w="20">
           <IconLink icon={AiFillGithub} href={github} target="_blank" rel="noreferrer" />
